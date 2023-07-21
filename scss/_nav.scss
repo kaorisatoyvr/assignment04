@@ -27,7 +27,7 @@
       }
 
     .nav-list {
-        display: flex;
+        display: flex !important;
         background-color: $main-color;
         width: auto;
         height: auto;
