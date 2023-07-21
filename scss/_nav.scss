@@ -1,0 +1,72 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+ /* header */
+  /* Outer navigation wrapper */
+.navigation {
+    @include width100-relative;
+    height: $nav-height;
+    background-color: $main-color;
+  }  
+
+  .nav-dropdown {
+    display: none;
+    z-index: 1;
+    background-color: rgb(225, 225, 225);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+
+    /* nav menu for desktop */
+  @media (min-width: 800px) {
+    .nav-mobile {
+      display: none;
+      }
+
+    .nav-container {
+        @include flex-relative;
+      }
+
+    .nav-list {
+        display: flex !important;
+        background-color: $main-color;
+        width: auto;
+        height: auto;
+        margin: 25px 15px 0 0;
+        padding: 3px;
+        top: 0;
+        gap: 30px;
+      }
+
+    nav {
+        ul {
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+          li{
+            a {
+            color: white;
+            font-size: 1.25rem;
+            }
+            &:hover {
+              background: rgb(121, 121, 121);
+              width: 100px;
+              height: 40px;
+              display: block;
+              transition: color .4s;
+            } 
+          }   
+    }
+    
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      background-color: rgb(223, 223, 223);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+      text-align: left;
+        a {
+          color: black;
+          font-size: 1rem;
+        }
+      }
+    }

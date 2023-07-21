@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+/* footer-last */
+.footer-end {
+width: 100%;
+height: 6vh;
+color: white;
+background-color: $main-color;
+display: flex;
+position: relative;
+}
+.kdk {
+font-size: 1.25rem;
+font-weight: bold;
+margin: 0.5rem 0 0 1rem;
+text-transform: uppercase;
+    a{
+        color: white;
+        font-weight: bold;
+    }
+}
+.copywrite {
+width: 90%;
+font-size: 1rem;
+text-align: center;
+margin-top: 0.75rem;
+}
+
+.logo2 {
+width: 30px;
+height: 30px;
+transform: rotate(10deg);
+margin-top: 0.5rem;
+}

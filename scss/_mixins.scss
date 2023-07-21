@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-relative {
+    display: flex;
+    position: relative;
+}
+
+@mixin width100-relative {
+    width: 100%;
+    position: relative;
+}

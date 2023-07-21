@@ -1,0 +1,39 @@
+@use "mixins" as *;
+
+.news-grid {
+  @include flex-column;
+    gap: 25px;
+    padding: 4rem 0;
+    margin: auto;
+  }
+  
+  .card {
+    @include flex-column;
+    width: 100%;
+    box-shadow: 1px 3px #88888833;
+    img {
+      min-height: 200px;
+    }
+    h4, div {
+      padding: 5px 10px;
+      margin: 0;
+    }
+  }
+  
+  .date {
+    display: flex;
+    p {
+      margin: 0;
+    }
+  }
+  
+  @media all and (min-width: 760px) {
+    .news-grid {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .card {
+      width: 31%;
+    }
+  }

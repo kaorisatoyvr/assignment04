@@ -1,4 +1,5 @@
 'use strict';
+
 (function($) { // Begin jQuery
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
@@ -24,3 +25,24 @@
     });
   }); // end DOM ready
 })(jQuery); // end jQuery
+
+const mql = window.matchMedia("(max-width: 800px)");
+const nav = document.getElementById("nav-mobile");
+mql.addListener(removeTransition);
+
+console.log(nav);
+
+function openMenu(){
+
+  nav.classList.add('activated');
+}
+
+function removeTransition(e){
+	// e -> is the event object
+	// e.matches -> stores a true false
+	// value depending if the media query
+	// list set above matches or not
+	if(e.matches){
+		nav.classList.remove('activated');
+	}
+}

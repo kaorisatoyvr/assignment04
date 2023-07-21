@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+/* footer */
+.footer-wrap{
+    background-color: $sub-color;
+    padding: 1rem;
+  }
+  .footer-container {
+    padding: 0 0 2rem 2rem;
+  }
+.basicFooter{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+      ul {
+        padding-left: 0;
+        li {
+          list-style: none; 
+        }
+        p {
+          line-height: 1.25rem;
+        }
+        &a:link{
+          text-decoration: none;
+          color: black;
+        }
+      }
+} 
+
+  /* Footer grid */
+  @media (min-width: 700px) {
+    .basicFooter {
+      grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 960px) {
+    .basicFooter {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    }

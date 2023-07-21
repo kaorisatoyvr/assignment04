@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+ /* Mobile navigation */
+  /* Binds to JS Toggle */
+.nav-mobile {
+position: absolute;
+top: 0;
+right: 0;
+height: $nav-height;
+width: $nav-height;
+}
+
+.nav-mobile span {
+display: block;
+height: 5px;
+width: 30px;
+background-color: white;
+}
+
+nav{ 
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  a {
+    color: black;
+    font-size: 1.5rem;
+  }
+  li:hover {
+    background: rgb(210, 210, 210);
+    display: block;
+    text-decoration: none;
+    transition: color .3s;
+    }
+}
+
+.nav-list {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: $nav-height;
+  right: 0;
+  width: 100%;
+  background-color: $sub-color2;
+  margin-top: 0;
+  padding: 1rem 0 0 3rem;
+  text-align: center;
+  gap: 2px;
+}
+
+.nav-dropdown a {
+font-size: 1.25rem;
+}
+.nav-list a:link { 
+text-decoration: none; 
+}
