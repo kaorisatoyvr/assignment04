@@ -1,0 +1,48 @@
+@use "variables" as *;
+/* Logo and branding */
+.title {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+}
+    
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold; 
+    }
+}
+    
+.logo {
+    position: absolute;
+    width:50px;
+    top: 1rem;
+    left: 5rem;
+    transform: rotate(15deg);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.bounce:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}

@@ -1,4 +1,6 @@
 'use strict';
+let mql = window.matchMedia("(max-width: 800px)");
+
 (function($) { // Begin jQuery
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
@@ -22,5 +24,6 @@
       $(this).toggleClass("open");
       $(".navbar").toggleClass("sp_open");
     });
+    $(".nav-mobile").text(mql.matches);
   }); // end DOM ready
 })(jQuery); // end jQuery

@@ -1,0 +1,150 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+main {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    max-width: 75rem;
+    padding: 0 2rem;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .hero-section {
+    @include flex-column;
+    justify-content: space-between;
+  }
+  
+  .left-side {
+    @include width100-relative;
+    margin-bottom: 32px;
+  }
+  
+  .post-img {
+    position: relative;
+    padding-bottom: 56.2%;
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .post {
+    p {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  aside a {
+    color: $main-color;
+    text-transform: lowercase;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+    display: block;
+    font-weight: 600;
+  }
+  
+  .post-title h3 span:hover {
+    border-bottom: 1px solid $main-color
+  }
+  
+  .date {
+    list-style: none;
+    font-size: 0.6rem;
+    padding: 0.5rem 0;
+  }
+  
+  .post-inner-content {
+    @include width100-relative;
+    max-width: 640px;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem 0.5rem;
+    z-index: 999;
+    margin: auto;
+    margin-top: 0;
+    right: 0;
+  }
+  
+  .right-side {
+    width: 100%;
+  }
+  
+  .posts {
+    @include flex-column;
+    align-items: center;
+  }
+  
+  .post {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .right-side-post-title {
+    margin-left: 1rem;
+  }
+
+%emphasize {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $main-color;
+}
+
+  .sub-title {
+    h2 {
+      @extend %emphasize;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    &:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #e9e9e9;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .trendingNews{
+    @extend %emphasize;
+    margin: 2rem 0 0 0;
+    text-align: center;
+  }
+  
+  @media (min-width: 960px) {
+    .hero-section {
+      flex-direction: row;
+    }
+    .left-side {
+      width: 70%;
+      margin-bottom: 0;
+    }
+    .right-side {
+      width: 27%;
+    }
+    .sub-title h2 {
+      text-align: left;
+    }
+    .trendingNews{
+      text-align: left;
+    }
+    .post-inner-content {
+      margin-top: -3rem;
+    }
+  }

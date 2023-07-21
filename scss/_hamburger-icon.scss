@@ -1,0 +1,46 @@
+ /* hamburger icon */
+  
+ #nav-toggle {
+    z-index: 200;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    }
+    #nav-toggle span {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    vertical-align: top;
+    }
+    #nav-toggle span:nth-child(2) {
+    margin-top: 10px;
+    }
+    #nav-toggle span:last-child {
+    margin-top: 20px;
+    }
+    #nav-toggle.open span {
+    top: 29px;
+    left: 14px;
+    width: 35px;
+    margin: 0;
+    }
+    #nav-toggle.open span:first-child {
+    transform: rotate(45deg);
+    }
+    #nav-toggle.open span:nth-child(2) {
+    display: none;
+    }
+    #nav-toggle.open span:last-child {
+    transform: rotate(-45deg);
+    }
+    
+    /* end of hanburger icon */
